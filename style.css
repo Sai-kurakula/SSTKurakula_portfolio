@@ -9,6 +9,8 @@
 
 body{
      font-family: 'Poppins', sans-serif;
+     padding: 20px;
+     font-size: 1.2em;
 }
 
 html {
@@ -23,7 +25,7 @@ p{
 
 a,
 .btn {
-    transition: all 300ms ease
+    transition: transform 0.3s ease;
 }
 
 /* Desktop Navigation */
@@ -48,14 +50,17 @@ nav {
 a{
     color: black;
     text-decoration: none;
-    text-decoration-color: white;
+    transition: transform 0.3s ease;
 }
 
-a:hover{
-    color: grey;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgb(181, 181, 181);
+a:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #007bff; /* Change the text color to appealing blue */
+}
+
+a:active {
+    transform: scale(0.9);
 }
 
 .logo {
@@ -150,10 +155,9 @@ a:hover{
 
 section {
     padding-top: 4vh;
-    height: 96vh;
+    min-height: 96vh; /* Changed from height to min-height */
     margin: 0 10rem;
     box-sizing: border-box;
-    min-height:  fit-content;
 }
 
 .selection-container{
@@ -215,9 +219,20 @@ section {
 /* BUTTONS */
 
 .btn-container{
-    display: flex;
+    display:flex;
     justify-content: center;
     gap: 1rem;
+}
+
+.btn:hover {
+    
+    transform: scale(1.1);
+    font-weight: bold !important;
+    color: #007bff !important;
+}
+
+.btn:active {
+    transform: scale(0.9);
 }
 
 .btn {
@@ -307,7 +322,7 @@ section {
 
 .section-container{
     gap: 1rem;
-    height:40%;
+    height:10%;
 }
 
 .section__pic-container {
@@ -341,7 +356,7 @@ section {
     text-align: initial;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 3.5rem;
     justify-content: space-around;
 }
 
@@ -361,6 +376,7 @@ article .icon{
 
 #projects {
     position: relative;
+    margin-top: 2rem;
 }
 
 .color-container{
@@ -434,3 +450,24 @@ footer{
 footer p{
     text-align: center;
 }
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #3498db; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+section {
+    transition: all 0.5s ease;
+}
+
